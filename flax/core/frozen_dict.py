@@ -17,15 +17,7 @@
 import collections
 from collections.abc import Iterable
 from types import MappingProxyType
-from typing import (
-    Any,
-    Dict,
-    Hashable,
-    Mapping,
-    Tuple,
-    TypeVar,
-    Union,
-)
+from typing import Any, Dict, Hashable, Mapping, Tuple, TypeVar, Union
 
 import jax
 
@@ -242,7 +234,8 @@ def unfreeze(
 
 def copy(
     x: Union[FrozenDict[Any, Any], Dict[str, Any]],
-    add_or_replace: Union[FrozenDict[str, Any], Dict[str, Any]] = FrozenDict({}),
+    add_or_replace: Union[FrozenDict[str, Any],
+                          Dict[str, Any]] = FrozenDict({})
 ) -> Union[FrozenDict[Any, Any], Dict[str, Any]]:
     """Create a new dict with additional and/or replaced entries. This is a utility
     function that can act on either a FrozenDict or regular dict and mimics the
